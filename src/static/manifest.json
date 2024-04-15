@@ -1,0 +1,33 @@
+{
+    "theme_color": "#1e1e1e",
+    "background_color": "#1e1e1e",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Kobeni's Password Generator",
+    "short_name": "Kobeni's Password Generator",
+    "description": "A simple yet useful password generator.",
+    "icons": [
+        {
+            "src": "/assets/icons/16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/assets/icons/128.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        }
+    ]
+}
