@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/optimized.css">
-    <script src="/static/javascript/optimized.js"></script>
+    <script src="/static/javascript/optimized.js"defer></script>
     <link rel="manifest" href="/static/manifest.json" />
     <link rel="icon" type="image/png" href="/static/assets/icons/96.png" />
     <meta name="theme-color" content="#1e1e1e"/>
@@ -14,7 +14,7 @@
     <meta name="author" content="Kobeni">
     <meta property="og:title" content="Kobeni's Password Generator">
     <meta property="og:description" content="a simple yet useful password generator.">
-    <meta property="og:image" content="/static/assets/icons/logo.png">
+    <meta property="og:image" content="/static/assets/icons/128.png">
     <meta property="og:url" content="https://kobenisilly.pythonanywhere.com/">
 </head>
 <body>
@@ -27,7 +27,7 @@
             <form id="passwordForm" action="/generate" method="POST">
                 <div class="form-group">
                     <label for="length">Password Length:</label>
-                    <input type="range" id="length" name="length" min="1" max="128" value="12">
+                    <input type="range" id="length" name="length" min="1" max="128" value="16">
                     <output id="lengthOutput">12</output>
                 </div>
                 <div class="form-group">
