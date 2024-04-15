@@ -9,23 +9,23 @@
     "description": "A simple yet useful password generator.",
     "icons": [
         {
-            "src": "/assets/icons/16.png",
+            "src": "/static/assets/icons/16.png",
             "sizes": "16x16",
             "type": "image/png"
         },
         {
-            "src": "/assets/icons/32.png",
+            "src": "/static/assets/icons/32.png",
             "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "/assets/icons/96.png",
+            "src": "/static/assets/icons/96.png",
             "sizes": "96x96",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "/assets/icons/128.png",
+            "src": "/static/assets/icons/120.png",
             "sizes": "120x120",
             "type": "image/png"
         }
