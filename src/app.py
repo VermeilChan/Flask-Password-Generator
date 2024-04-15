@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-def generate_password(length=12, include_uppercase=True, include_lowercase=True, include_digits=True, include_special=True):
+def generate_password(length=16, include_uppercase=True, include_lowercase=True, include_digits=True, include_special=True):
     characters = ''
     if include_uppercase:
         characters += ascii_uppercase
