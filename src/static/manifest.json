@@ -1,12 +1,12 @@
 {
-    "theme_color": "#1e1e1e",
-    "background_color": "#1e1e1e",
+    "theme_color": "#282828",
+    "background_color": "#282828",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Kobeni's Password Generator",
-    "short_name": "Kobeni's Password Generator",
-    "description": "A simple yet useful password generator.",
+    "name": "Yet Another Password Generator",
+    "short_name": "Yet Another Password Generator",
+    "description": "A simple password generator.",
     "icons": [
         {
             "src": "/static/assets/icons/16.png",
