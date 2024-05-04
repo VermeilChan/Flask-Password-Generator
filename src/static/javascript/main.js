@@ -9,10 +9,6 @@ function generatePassword() {
     .then(response => response.text())
     .then(password => {
         document.getElementById("passwordDisplay").textContent = password;
-        document.getElementById("message").textContent = "Password generated!";
-        setTimeout(function() {
-            document.getElementById("message").textContent = "";
-        }, 3000);
     });
 }
 
