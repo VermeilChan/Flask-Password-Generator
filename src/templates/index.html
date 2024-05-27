@@ -4,10 +4,9 @@
     <title>Yet Another Password Generator</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/optimized.css">
-    <script src="/static/javascript/optimized.js"defer></script>
+    <script src="/static/javascript/optimized.js" defer></script>
     <link rel="manifest" href="/static/manifest.json" />
-    <link rel="icon" type="image/png" href="/static/assets/icons/96.png" />
+    <link rel="icon" type="image/png" href="/static/assets/icons/128.png" />
     <meta name="theme-color" content="#282828"/>
     <meta name="description" content="A simple password generator.">
     <meta name="keywords" content="password, generator, password generator">
@@ -16,38 +15,53 @@
     <meta property="og:description" content="A simple password generator.">
     <meta property="og:image" content="/static/assets/icons/128.png">
     <meta property="og:url" content="https://kobenisilly.pythonanywhere.com/">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background:#2d2d2d}::-webkit-scrollbar-thumb{background-color:#4a4a4a;border-radius:6px;border:3px solid #2d2d2d}::-webkit-scrollbar-thumb:hover{background-color:#555}#passwordDisplay{max-height:200px;overflow-y:auto;word-break:break-all;white-space:pre-wrap}
+    </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <img src="/static/assets/icons/password.svg" width="96" height="96" alt="Password Icon">
-            <h1>Yet Another Password Generator</h1>
+<body class="bg-gray-900 text-white min-h-screen flex flex-col justify-center items-center">
+    <div class="container mx-auto p-4">
+        <div class="header text-center mb-8">
+            <img src="/static/assets/icons/password.svg" width="96" height="96" alt="Password Icon" class="mx-auto">
+            <h1 class="text-3xl font-bold mt-4">Yet Another Password Generator</h1>
         </div>
-        <div class="generator-container">
-            <form id="passwordForm" action="/generate" method="POST">
+        <div class="generator-container bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md mx-auto">
+            <form id="passwordForm" action="/generate" method="POST" class="space-y-4">
                 <div class="form-group">
-                    <label for="length">Password Length:</label>
-                    <input type="range" id="length" name="length" min="1" max="4096" value="20">
-                    <output id="lengthOutput">20</output>
+                    <label for="length" class="block text-sm font-medium">Password Length:</label>
+                    <input type="range" id="length" name="length" min="1" max="4096" value="20" class="w-full">
+                    <output id="lengthOutput" class="block text-center mt-2">20</output>
                 </div>
-                <div class="form-group">
-                    <label><input type="checkbox" id="uppercaseCheckbox" name="uppercase" checked> Uppercase Letters</label>
-                    <label><input type="checkbox" id="lowercaseCheckbox" name="lowercase" checked> Lowercase Letters</label>
-                    <label><input type="checkbox" id="digitsCheckbox" name="digits" checked> Digits</label>
-                    <label><input type="checkbox" id="specialCheckbox" name="special" checked> Special Characters</label>
+                <div class="form-group space-y-2">
+                    <label class="block">
+                        <input type="checkbox" id="uppercaseCheckbox" name="uppercase" checked class="mr-2">
+                        Uppercase Letters
+                    </label>
+                    <label class="block">
+                        <input type="checkbox" id="lowercaseCheckbox" name="lowercase" checked class="mr-2">
+                        Lowercase Letters
+                    </label>
+                    <label class="block">
+                        <input type="checkbox" id="digitsCheckbox" name="digits" checked class="mr-2">
+                        Digits
+                    </label>
+                    <label class="block">
+                        <input type="checkbox" id="specialCheckbox" name="special" checked class="mr-2">
+                        Special Characters
+                    </label>
                 </div>
-                <div class="form-group">
-                    <button type="button" id="generateBtn" onclick="generatePassword()">Generate Password</button>
-                    <button type="button" onclick="copyToClipboard()">Copy</button>
+                <div class="form-group flex justify-between">
+                    <button type="button" id="generateBtn" onclick="generatePassword()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg">Generate Password</button>
+                    <button type="button" onclick="copyToClipboard()" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg">Copy</button>
                 </div>
             </form>
-            <div id="passwordDisplay" class="password-box"></div>
+            <div id="passwordDisplay" class="password-box bg-gray-700 p-4 mt-4 rounded-lg text-center overflow-hidden"></div>
         </div>
     </div>
 
-    <footer style="text-align: center; padding: 10px; font-size: small; color: rgb(0, 140, 255);">
-        This password generator uses the <a href="https://docs.python.org/3/library/secrets.html">Python secrets module</a> for generating passwords.
+    <footer class="text-center py-4 text-sm text-blue-400 mt-8">
+        This password generator uses the <a href="https://docs.python.org/3/library/secrets.html" class="text-blue-300 hover:text-blue-500">Python secrets module</a> for generating passwords.
     </footer>
-
 </body>
 </html>
